@@ -41,6 +41,8 @@ body {
   overflow: auto;
   -webkit-box-align: center;
   align-items: center;
+  margin-right: 300px;
+  margin-left: 300px;
 }
 
 .input-card-top2 {
@@ -69,7 +71,7 @@ body {
 }
 
 .right {
-  flex: 1;
+  flex: 2;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
