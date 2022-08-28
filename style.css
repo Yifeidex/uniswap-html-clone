@@ -33,7 +33,7 @@ body {
   justify-self: center;
   background-color: rgb(25, 27, 31);
   width: fit-content;
-  padding: 1px;
+  padding: 0px;
   border-radius: 16px;
   display: grid;
   grid-auto-flow: column;
@@ -71,7 +71,7 @@ body {
 }
 
 .right {
-  flex: 2;
+  flex: 1;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -80,12 +80,12 @@ body {
 
 .eth-button {
   background: rgb(25, 27, 31) !important;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .eth-button .ethereum-coin {
   background: rgb(25, 27, 31) !important;
-  border-radius: 10px;
+  border-radius: 15px;
   color: inherit !important;
   font-weight: 600 !important;
 }
