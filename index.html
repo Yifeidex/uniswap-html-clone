@@ -75,44 +75,49 @@
                     </div>
             </nav>
             <!--End of Navigation Menu-->
-            <div>
+            <div class="main-body">
     
-                <div>
-                    <div>
+                <div class="tab-content " id="pills-tabContent">
+                    <div class="swap-container tab-pane fade show active" id="pills-swap" role="tabpanel"
+                        aria-labelledby="pills-swap-tab">
     
-                        <div>
-                            <div>
-                                <div>
+                        <div class="swap-contents">
+                            <div class="card swap-contents-card">
+                                <div class="swap-head card-header">
                                     Swap
                                 </div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <input type="text" value="">
-                                            <div>
-                                                <button type="button">
-                                                    <img src="./img/eth.png" alt="">
-                                                    <img src="/"/>
-                                                    <span></span>
+                                <div class="card-body">
+                                    <div class="card-input input-group">
+                                        <div class="input-card-top input-eth">
+                                            <input type="text" value="" placeholder="0.0" class="form-control"
+                                                aria-label="Text input with dropdown button" id="from-amount">
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" data-toggle="modal"
+                                                    data-target="#modal-token" aria-haspopup="true" aria-expanded="false" id="from-token-selected">
+                                                    <img class="token-image" src="./img/eth.png" alt="" id="token-default-img">
+                                                    <img class="token-image" id="from-token-img">
+                                                    <span id="from-token-text"></span>
     
                                                 </button>
     
-                                                <div>
-                                                    <div>
-                                                        <div>
-                                                            <div>
-                                                                <h5>Select a
+                                                <div class="modal fade" id="modal-token" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="eth-search-modal modal-dialog" role="document">
+                                                        <div class="eth-search-modal modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Select a
                                                                     token</h5>
-                                                                <button>
-                                                                    <span>&times;</span>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
-                                                            <div>
-                                                                <div>
-                                                                    <input type="text">
+                                                            <div class="modal-body">
+                                                                <div class="modal-search">
+                                                                    <input type="text" id="search-input" placeholder="Search name" onkeyup="filterFunction()">
                                                                 </div>
-                                                                <hr>
-                                                                <div>
+                                                                <hr class="line-divider">
+                                                                <div class="all-coin" id="all-coin-list">
                                                                 </div>
                                                             </div>
     
@@ -122,20 +127,23 @@
                                             </div>
                                         </div>
                                      
-                                        <div><img src="./img/arrow.png" alt=""></div>
-                                        <div>
-                                            <input type="text" value="">
-                                            <div>
-                                                <button type="button">
-                                                    <span>select a token</span>
-                                                    <img>
-                                                    <span></span>
+                                        <div class="card-arrow"><img src="./img/arrow.png" alt=""></div>
+                                        <div class="input-card-top">
+                                            <input type="text" value="" class="form-control"
+                                                aria-label="Text input with dropdown button" id="to-amount" disabled>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary dropdown-toggle" type="button"
+                                                    data-toggle="modal" data-target="#modal-token" aria-haspopup="true"
+                                                    aria-expanded="false" id="to-token-selected">
+                                                    <span id="select-token-text">select a token</span>
+                                                    <img class="token-image" id="to-token-img">
+                                                    <span id="to-token-text"></span>
                                                 </button>
                                             </div>
                                         </div>
-                                        <div>Estimated Gas: <span></span></div>
+                                        <div>Estimated Gas: <span id="gas-estimate"></span></div>
                                     </div>
-                                    <button type="button">
+                                    <button type="button" class="connect-wallet-down" id="main-connect-wallet-button">
                                         Connect Wallet
                                     </button>
                                 </div>
@@ -145,7 +153,7 @@
                     </div>
     
                     </div>
-                </div>
+                </div>    
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
